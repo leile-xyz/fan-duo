@@ -37,7 +37,7 @@ $(window).resize(function() {
 	};
 })(jQuery);
 
-function timeElapse(date){
+function timeElapse(startTime){
     var now = new Date(); // 当前时间
     var start = new Date(startTime); // 指定的开始时间
 
