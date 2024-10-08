@@ -63,6 +63,7 @@
 
     <script>
         (function () {
+            
             var canvas = $('#canvas');
 
             if (!canvas[0].getContext) {
@@ -218,6 +219,13 @@
             }));
 
             runAsync().start();
+
+            var audio = document.getElementById('media');
+            // 尝试播放音频
+            audio.play().catch(function(error) {
+                console.log('自动播放失败，等待用户交互:', error);
+                // 如果自动播放失败，可以添加提示或等待用户交互
+            });
         })();
     </script>
 
