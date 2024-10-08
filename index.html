@@ -59,13 +59,10 @@
 
     </div>
 
-   <audio autoplay id="media" src="./love.mp3" loop></audio>
+   <audio autoplay muted id="media" src="./love.mp3" loop></audio>
 
     <script>
         (function () {
- var audio = document.getElementById('media');
-    audio.play();
-            
             var canvas = $('#canvas');
 
             if (!canvas[0].getContext) {
