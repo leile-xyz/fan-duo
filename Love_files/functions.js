@@ -38,20 +38,20 @@ $(window).resize(function() {
 })(jQuery);
 
 function timeElapse(date){
-    const now = new Date(); // 当前时间
-    const start = new Date(startTime); // 指定的开始时间
+    var now = new Date(); // 当前时间
+    var start = new Date(startTime); // 指定的开始时间
 
     // 计算时间差，单位为毫秒
-    const timeDifference = now - start;
+    var timeDifference = now - start;
 
     // 将时间差转为秒
-    const totalSeconds = Math.floor(timeDifference / 1000);
+    var totalSeconds = Math.floor(timeDifference / 1000);
 
     // 计算天、小时、分钟、秒
-    const days = Math.floor(totalSeconds / (3600 * 24));
-    const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
+    var days = Math.floor(totalSeconds / (3600 * 24));
+    var hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+    var minutes = Math.floor((totalSeconds % 3600) / 60);
+    var seconds = totalSeconds % 60;
 	var result = "第 <span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 小时 <span class=\"digit\">" + minutes + "</span> 分钟 <span class=\"digit\">" + seconds + "</span> 秒"; 
 	$("#clock").html(result);
 }
