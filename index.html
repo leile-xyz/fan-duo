@@ -128,6 +128,11 @@
                     canvas.unbind("mousemove");
                     canvas.removeClass('hand');
                 }
+
+                
+
+                debugger;
+                 document.getElementById('media').play();
             }).mousemove(function (e) {
                 var offset = canvas.offset(), x, y;
                 x = e.pageX - offset.left;
@@ -216,9 +221,6 @@
                 textAnimate().start();
 
                 $await(jumpAnimate());
-
-                debugger;
-                 document.getElementById('media').play();
             }));
 
             runAsync().start();
